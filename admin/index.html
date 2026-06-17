@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Enfance Pre School</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Admin specific overriding details */
+    .admin-card input, .admin-card textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      outline: none;
+      font-family: inherit;
+    }
+    .admin-card input:focus, .admin-card textarea:focus {
+      border-color: var(--primary);
+    }
+    .admin-card label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-wrap">
+    <div class="container">
+      
+      <!-- LOGIN BOX -->
+      <div id="login" class="login-box">
+        <h1>🎈 Admin Login</h1>
+        <p>Manage website contact details, program offerings, and admission enquiries.</p>
+        
+        <div style="text-align: left; margin-bottom: 15px;">
+          <input id="user" placeholder="Username" value="admin">
+          <input id="pass" type="password" placeholder="Password" value="admin123">
+        </div>
+        
+        <button class="btn" onclick="login()">Login Dashboard</button>
+        <p style="color: var(--muted); font-size: 14px; margin-top: 15px;">
+          Demo credentials:<br><strong>Username</strong>: admin | <strong>Password</strong>: admin123
+        </p>
+      </div>
+
+      <!-- MAIN CONTROL PANEL -->
+      <div id="panel" style="display: none;">
+        <div class="admin-panel">
+          
+          <!-- SIDEBAR -->
+          <aside class="sidebar">
+            <h2>Enfance Admin</h2>
+            <button class="active" onclick="showTab('dashboard', this)">📊 Dashboard</button>
+            <button onclick="showTab('content', this)">⚙️ Website Content</button>
+            <button onclick="showTab('programs', this)">📚 Programs Manager</button>
+            <button onclick="showTab('enquiries', this)">📬 Enquiries Inbox</button>
+            <button onclick="logout()" style="color: #fca5a5; margin-top: 20px;">🔒 Logout</button>
+            <a class="btn alt" style="margin-top: 25px; width: 100%; text-shadow: none;" href="../index.html">🌐 View Site</a>
+          </aside>
+
+          <!-- CONTENT PANELS -->
+          <main>
+            
+            <!-- DASHBOARD TAB -->
+            <section id="dashboard" class="tab">
+              <div class="admin-card">
+                <h1>Overview Metrics</h1>
+                <div class="stats" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                  <div class="stat">
+                    <b id="eqCount" style="color: var(--secondary);">0</b>
+                    <span>Total Enquiries Recieved</span>
+                  </div>
+                  <div class="stat">
+                    <b>6</b>
+                    <span>Total Pages Managed</span>
+                  </div>
+                  <div class="stat">
+                    <b id="pgCount">4</b>
+                    <span>Dynamic Programs</span>
+                  </div>
+                  <div class="stat">
+                    <b style="color: var(--green);">Active</b>
+                    <span>Local Database Status</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- WEBSITE CONTENT TAB -->
+            <section id="content" class="tab" style="display: none;">
+              <div class="admin-card">
+                <h1>Manage Header & Contact Details</h1>
+                
+                <label for="school">School Name</label>
+                <input id="school" placeholder="School Name">
+                
+                <label for="phone">Phone Number</label>
+                <input id="phone" placeholder="Phone Number">
+                
+                <label for="email">Email Address</label>
+                <input id="email" placeholder="Email Address">
+                
+                <label for="address">Campus Address</label>
+                <input id="address" placeholder="Campus Address">
+                
+                <label for="admission">Admissions Callout Text</label>
+                <input id="admission" placeholder="Admission Callout Text">
+                
+                <label for="heroTitleAdmin">Hero Title (Homepage)</label>
+                <input id="heroTitleAdmin" placeholder="Hero Title">
+                
+                <label for="heroTextAdmin">Hero Tagline (Homepage)</label>
+                <textarea id="heroTextAdmin" rows="4" placeholder="Hero Description Text"></textarea>
+                
+                <button class="btn" onclick="saveContent()">Save Content Details</button>
+              </div>
+            </section>
+
+            <!-- PROGRAMS TAB -->
+            <section id="programs" class="tab" style="display: none;">
+              <div class="admin-card">
+                <h1>Manage Class Programs</h1>
+                <p style="color: var(--muted); margin-bottom: 25px;">Define, rename, or update the syllabus details and age brackets for preschool program offerings.</p>
+                
+                <div id="programRows"></div>
+                
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                  <button class="btn alt" onclick="addProgram()">+ Add New Program Card</button>
+                  <button class="btn" onclick="savePrograms()">Save Programs Grid</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- ENQUIRIES TAB -->
+            <section id="enquiries" class="tab" style="display: none;">
+              <div class="admin-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px;">
+                  <h1 style="margin: 0; border: none; padding: 0;">Admission Enquiries</h1>
+                  <button class="btn alt outline" onclick="clearEnquiries()" style="padding: 10px 20px;">Clear Inbox</button>
+                </div>
+                
+                <div style="overflow-x: auto; background: var(--white); border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Date Submitted</th>
+                        <th>Parent Name</th>
+                        <th>Mobile Number</th>
+                        <th>Chosen Program</th>
+                        <th>Message Content</th>
+                      </tr>
+                    </thead>
+                    <tbody id="enquiryRows">
+                      <!-- Rendered dynamically by javascript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+          </main>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js?v=5"></script>
+  <script src="admin.js?v=2"></script>
+</body>
+</html>
