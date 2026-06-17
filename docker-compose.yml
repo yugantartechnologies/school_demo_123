@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  enfance-web:
+    container_name: enfance_pre_school_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped

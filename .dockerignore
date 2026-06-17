@@ -1,0 +1,10 @@
+.git
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+run_website.bat
+Enfance_Pre_School_Website/run_website.bat
+Enfance_Pre_School_Website/README.txt
+node_modules/
+npm-debug.log*
