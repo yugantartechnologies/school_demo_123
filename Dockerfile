@@ -5,7 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the static website files to the Nginx HTML directory
-COPY Enfance_Pre_School_Website/ /usr/share/nginx/html/
+COPY . /usr/share/nginx/html/
 
 # Expose port 80 to the outside world
 EXPOSE 80
