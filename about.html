@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Enfance Pre School</title>
   <meta name="description" content="Learn more about the mission, vision, values, experienced teaching staff, and educational facilities at Enfance Pre School.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
@@ -26,14 +27,14 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-info">
-        <span>📞 <span data-phone></span></span>
-        <span>✉️ <span data-email></span></span>
-        <span>📍 <span data-address></span></span>
+        <span><i class="fa-solid fa-phone"></i> <span data-phone></span></span>
+        <span><i class="fa-solid fa-envelope"></i> <span data-email></span></span>
+        <span><i class="fa-solid fa-location-dot"></i> <span data-address></span></span>
       </div>
       <div class="topbar-socials">
-        <a href="#" title="Facebook">🌐</a>
-        <a href="#" title="Instagram">📸</a>
-        <a href="#" title="YouTube">📺</a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </div>
@@ -42,7 +43,7 @@
   <nav class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <span class="brand-badge">🎈</span>
+        <img src="assets/images/logo.png" alt="Enfance Logo" class="brand-logo-img">
         <span data-school>Enfance Pre School</span>
       </a>
       <button class="hamb" aria-label="Toggle Menu">☰</button>
@@ -76,13 +77,13 @@
         
         <div class="list">
           <div class="list-item" style="border-left-color: var(--primary);">
-            🎯 <strong>Our Mission</strong>: To deliver an engaging, activity-based foundation that cultivates intellectual curiosity, creativity, and essential life values.
+            <i class="fa-solid fa-bullseye" style="color: var(--primary); margin-right: 8px;"></i> <strong>Our Mission</strong>: To deliver an engaging, activity-based foundation that cultivates intellectual curiosity, creativity, and essential life values.
           </div>
           <div class="list-item" style="border-left-color: var(--accent);">
-            🌈 <strong>Our Vision</strong>: To raise confident, communicative, and compassionate future citizens who approach learning with joy and excitement.
+            <i class="fa-solid fa-rainbow" style="color: var(--accent); margin-right: 8px;"></i> <strong>Our Vision</strong>: To raise confident, communicative, and compassionate future citizens who approach learning with joy and excitement.
           </div>
           <div class="list-item" style="border-left-color: var(--secondary);">
-            ❤️ <strong>Core Values</strong>: Child Safety First, Joyful learning, Mutual Care & Respect, Creative Expression, and Parental Integration.
+            <i class="fa-solid fa-heart" style="color: var(--secondary); margin-right: 8px;"></i> <strong>Core Values</strong>: Child Safety First, Joyful learning, Mutual Care & Respect, Creative Expression, and Parental Integration.
           </div>
         </div>
       </div>
@@ -112,19 +113,19 @@
       
       <div class="cards">
         <div class="card card-primary reveal-up">
-          <div class="icon">📚</div>
+          <div class="icon"><i class="fa-solid fa-book-open-reader"></i></div>
           <h3>Modern Curriculum</h3>
           <p>Carefully balanced blend of language preparation, sensory math, interactive writing, vocabulary plays, and coordination exercises.</p>
         </div>
         
         <div class="card card-secondary reveal-up" style="animation-delay: 0.1s;">
-          <div class="icon">🏫</div>
+          <div class="icon"><i class="fa-solid fa-school-flag"></i></div>
           <h3>Creative Labs</h3>
           <p>Dedicated indoor soft play corner, dynamic storytelling sets, artistic paint spaces, music hubs, and a kids mini gardening section.</p>
         </div>
         
         <div class="card card-purple reveal-up" style="animation-delay: 0.2s;">
-          <div class="icon">🤝</div>
+          <div class="icon"><i class="fa-solid fa-handshake-simple"></i></div>
           <h3>Parent Collaboration</h3>
           <p>Quarterly developmental meetings, mother-child craft workshops, family sports days, and online feedback networks.</p>
         </div>
@@ -240,7 +241,10 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="footer-logo">🎈 <span data-school>Enfance Pre School</span></div>
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Enfance Logo" class="footer-logo-img">
+          <span data-school>Enfance Pre School</span>
+        </div>
         <p style="margin-bottom: 20px;">Child-centered learning focusing on critical early-year milestones, social confidence, child safety, and creative exploration.</p>
       </div>
       
@@ -264,15 +268,16 @@
       <div>
         <h3>Get In Touch</h3>
         <ul class="footer-contact">
-          <li><span>📍</span> <span data-address></span></li>
-          <li><span>✉️</span> <span data-email></span></li>
-          <li><span>📞</span> <span data-phone></span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i></span> <span data-address></span></li>
+          <li><span><i class="fa-solid fa-envelope"></i></span> <span data-email></span></li>
+          <li><span><i class="fa-solid fa-phone"></i></span> <span data-phone></span></li>
         </ul>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      © <span id="year"></span> <span data-school></span>. All Rights Reserved. Designed for Joyful Foundation Education.
+      <div style="margin-bottom: 8px;">Made by Yugantar Technologies.</div>
+      © <span id="year"></span> <span data-school></span>. All Rights Reserved.
     </div>
   </footer>
 

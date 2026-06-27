@@ -424,7 +424,13 @@ function renderEnquiries() {
   const container = document.getElementById('enquiryRows');
   if (!container) return;
 
-  const rawEnquiries = JSON.parse(localStorage.getItem('enfanceEnquiries') || '[]');
+  let rawEnquiries;
+  try {
+    rawEnquiries = JSON.parse(localStorage.getItem('enfanceEnquiries') || '[]');
+    if (!Array.isArray(rawEnquiries)) rawEnquiries = [];
+  } catch (e) {
+    rawEnquiries = [];
+  }
   const sessionToken = sessionStorage.getItem('enfanceSessionToken');
 
   if (!sessionToken) {

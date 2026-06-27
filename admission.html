@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admission Enquiry - Enfance Pre School</title>
   <meta name="description" content="Secure admissions for your child at Enfance Pre School. Fill out our simple online enquiry form to request a call back or campus visit.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
@@ -26,14 +27,14 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-info">
-        <span>📞 <span data-phone></span></span>
-        <span>✉️ <span data-email></span></span>
-        <span>📍 <span data-address></span></span>
+        <span><i class="fa-solid fa-phone"></i> <span data-phone></span></span>
+        <span><i class="fa-solid fa-envelope"></i> <span data-email></span></span>
+        <span><i class="fa-solid fa-location-dot"></i> <span data-address></span></span>
       </div>
       <div class="topbar-socials">
-        <a href="#" title="Facebook">🌐</a>
-        <a href="#" title="Instagram">📸</a>
-        <a href="#" title="YouTube">📺</a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </div>
@@ -42,7 +43,7 @@
   <nav class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <span class="brand-badge">🎈</span>
+        <img src="assets/images/logo.png" alt="Enfance Logo" class="brand-logo-img">
         <span data-school>Enfance Pre School</span>
       </a>
       <button class="hamb" aria-label="Toggle Menu">☰</button>
@@ -78,16 +79,16 @@
         
         <div class="list">
           <div class="list-item" style="border-left-color: var(--primary);">
-            1️⃣ <strong>Fill the Online Enquiry Form</strong>: Complete the form on the right with child details and program preferences.
+            <i class="fa-solid fa-file-invoice" style="color: var(--primary); margin-right: 8px;"></i> <strong>Fill the Online Enquiry Form</strong>: Complete the form on the right with child details and program preferences.
           </div>
           <div class="list-item" style="border-left-color: var(--secondary);">
-            2️⃣ <strong>Personal Counsellor Call</strong>: Our counselor will call you within 24 hours to clarify curriculum details, fee structures, and schedules.
+            <i class="fa-solid fa-phone-volume" style="color: var(--secondary); margin-right: 8px;"></i> <strong>Personal Counsellor Call</strong>: Our counselor will call you within 24 hours to clarify curriculum details, fee structures, and schedules.
           </div>
           <div class="list-item" style="border-left-color: var(--accent);">
-            3️⃣ <strong>Campus Tour & Child Visit</strong>: Visit the school with your child to meet classroom teachers and inspect facility safety.
+            <i class="fa-solid fa-eye" style="color: var(--accent); margin-right: 8px;"></i> <strong>Campus Tour & Child Visit</strong>: Visit the school with your child to meet classroom teachers and inspect facility safety.
           </div>
           <div class="list-item" style="border-left-color: var(--purple);">
-            4️⃣ <strong>Documents & Fee Finalization</strong>: Submit copy of birth certificate, passport photos, medical history, and complete booking formalities.
+            <i class="fa-solid fa-file-shield" style="color: var(--purple); margin-right: 8px;"></i> <strong>Documents & Fee Finalization</strong>: Submit copy of birth certificate, passport photos, medical history, and complete booking formalities.
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
             <textarea name="message" rows="4" placeholder="Mention child's age or specific queries..."></textarea>
           </div>
           
-          <button class="btn" type="submit">Submit Enquiry 🎈</button>
+          <button class="btn" type="submit">Submit Enquiry <i class="fa-solid fa-paper-plane"></i></button>
         </form>
       </div>
 
@@ -131,7 +132,10 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="footer-logo">🎈 <span data-school>Enfance Pre School</span></div>
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Enfance Logo" class="footer-logo-img">
+          <span data-school>Enfance Pre School</span>
+        </div>
         <p style="margin-bottom: 20px;">Child-centered learning focusing on critical early-year milestones, social confidence, child safety, and creative exploration.</p>
       </div>
       
@@ -155,15 +159,16 @@
       <div>
         <h3>Get In Touch</h3>
         <ul class="footer-contact">
-          <li><span>📍</span> <span data-address></span></li>
-          <li><span>✉️</span> <span data-email></span></li>
-          <li><span>📞</span> <span data-phone></span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i></span> <span data-address></span></li>
+          <li><span><i class="fa-solid fa-envelope"></i></span> <span data-email></span></li>
+          <li><span><i class="fa-solid fa-phone"></i></span> <span data-phone></span></li>
         </ul>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      © <span id="year"></span> <span data-school></span>. All Rights Reserved. Designed for Joyful Foundation Education.
+      <div style="margin-bottom: 8px;">Made by Yugantar Technologies.</div>
+      © <span id="year"></span> <span data-school></span>. All Rights Reserved.
     </div>
   </footer>
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard - Enfance Pre School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     /* Admin specific overriding details */
@@ -34,7 +35,7 @@
       
       <!-- LOGIN BOX -->
       <div id="login" class="login-box">
-        <h1>🎈 Admin Login</h1>
+        <h1><i class="fa-solid fa-user-lock"></i> Admin Login</h1>
         <p>Manage website contact details, program offerings, and admission enquiries.</p>
         
         <div style="text-align: left; margin-bottom: 15px;">
@@ -55,12 +56,12 @@
           <!-- SIDEBAR -->
           <aside class="sidebar">
             <h2>Enfance Admin</h2>
-            <button class="active" onclick="showTab('dashboard', this)">📊 Dashboard</button>
-            <button onclick="showTab('content', this)">⚙️ Website Content</button>
-            <button onclick="showTab('programs', this)">📚 Programs Manager</button>
-            <button onclick="showTab('enquiries', this)">📬 Enquiries Inbox</button>
-            <button onclick="logout()" style="color: #fca5a5; margin-top: 20px;">🔒 Logout</button>
-            <a class="btn alt" style="margin-top: 25px; width: 100%; text-shadow: none;" href="../index.html">🌐 View Site</a>
+            <button class="active" onclick="showTab('dashboard', this)"><i class="fa-solid fa-chart-simple"></i> Dashboard</button>
+            <button onclick="showTab('content', this)"><i class="fa-solid fa-gear"></i> Website Content</button>
+            <button onclick="showTab('programs', this)"><i class="fa-solid fa-book"></i> Programs Manager</button>
+            <button onclick="showTab('enquiries', this)"><i class="fa-solid fa-inbox"></i> Enquiries Inbox</button>
+            <button onclick="logout()" style="color: #fca5a5; margin-top: 20px;"><i class="fa-solid fa-lock"></i> Logout</button>
+            <a class="btn alt" style="margin-top: 25px; width: 100%; text-shadow: none;" href="../index.html"><i class="fa-solid fa-globe"></i> View Site</a>
           </aside>
 
           <!-- CONTENT PANELS -->

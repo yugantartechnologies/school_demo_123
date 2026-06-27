@@ -263,8 +263,19 @@ img {
   transition: var(--transition-bounce);
 }
 
-.brand:hover .brand-badge {
-  transform: rotate(12deg) scale(1.1);
+.brand-logo-img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--white);
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-bounce);
+}
+
+.brand:hover .brand-logo-img {
+  transform: scale(1.08) rotate(3deg);
 }
 
 .menu {
@@ -1020,16 +1031,17 @@ img {
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
   z-index: 2000;
-  display: none;
+  display: flex;
   opacity: 0;
+  visibility: hidden;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 #lightbox.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
 }
 
 .lightbox-content-wrap {
@@ -1347,6 +1359,19 @@ img {
   font-size: 28px;
   color: var(--primary);
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: var(--white);
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .footer p {
@@ -1400,16 +1425,17 @@ img {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(8px);
   z-index: 3000;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-overlay.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
 }
 
 .modal-box {
@@ -1757,7 +1783,7 @@ img {
   .lightbox-next { right: -50px; }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
   .topbar {
     display: none;
   }
@@ -1770,7 +1796,7 @@ img {
     position: absolute;
     left: 0;
     right: 0;
-    top: 82px;
+    top: 100%;
     background: var(--white);
     display: none;
     flex-direction: column;
@@ -1828,6 +1854,17 @@ img {
 }
 
 @media(max-width: 576px) {
+  .brand {
+    font-size: 18px;
+    gap: 8px;
+  }
+  
+  .brand-logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+  }
+
   .cards,
   .programs,
   .stats,

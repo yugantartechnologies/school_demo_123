@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Enfance Pre School</title>
   <meta name="description" content="Get in touch with Enfance Pre School. Find our address, phone number, email, work timings, and interactive Google Map location.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
@@ -26,14 +27,14 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-info">
-        <span>📞 <span data-phone></span></span>
-        <span>✉️ <span data-email></span></span>
-        <span>📍 <span data-address></span></span>
+        <span><i class="fa-solid fa-phone"></i> <span data-phone></span></span>
+        <span><i class="fa-solid fa-envelope"></i> <span data-email></span></span>
+        <span><i class="fa-solid fa-location-dot"></i> <span data-address></span></span>
       </div>
       <div class="topbar-socials">
-        <a href="#" title="Facebook">🌐</a>
-        <a href="#" title="Instagram">📸</a>
-        <a href="#" title="YouTube">📺</a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </div>
@@ -42,7 +43,7 @@
   <nav class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <span class="brand-badge">🎈</span>
+        <img src="assets/images/logo.png" alt="Enfance Logo" class="brand-logo-img">
         <span data-school>Enfance Pre School</span>
       </a>
       <button class="hamb" aria-label="Toggle Menu">☰</button>
@@ -78,16 +79,16 @@
         
         <div class="list">
           <div class="list-item" style="border-left-color: var(--primary);">
-            📞 <strong>Call / WhatsApp</strong>:<br><span data-phone></span>
+            <i class="fa-solid fa-phone" style="color: var(--primary); margin-right: 8px;"></i> <strong>Call / WhatsApp</strong>:<br><span data-phone></span>
           </div>
           <div class="list-item" style="border-left-color: var(--secondary);">
-            ✉️ <strong>Admissions Email</strong>:<br><span data-email></span>
+            <i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 8px;"></i> <strong>Admissions Email</strong>:<br><span data-email></span>
           </div>
           <div class="list-item" style="border-left-color: var(--accent);">
-            📍 <strong>Campus Address</strong>:<br><span data-address></span>
+            <i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 8px;"></i> <strong>Campus Address</strong>:<br><span data-address></span>
           </div>
           <div class="list-item" style="border-left-color: var(--purple);">
-            🕘 <strong>Working Hours</strong>:<br>Monday to Saturday: 9:00 AM - 2:00 PM (Sunday Closed)
+            <i class="fa-solid fa-clock" style="color: var(--purple); margin-right: 8px;"></i> <strong>Working Hours</strong>:<br>Monday to Saturday: 9:00 AM - 2:00 PM (Sunday Closed)
           </div>
         </div>
       </div>
@@ -110,7 +111,7 @@
             <textarea name="message" rows="5" placeholder="Enter details about your query here..." required></textarea>
           </div>
           
-          <button class="btn alt" type="submit">Send Message ✉️</button>
+          <button class="btn alt" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
         </form>
       </div>
 
@@ -130,7 +131,10 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="footer-logo">🎈 <span data-school>Enfance Pre School</span></div>
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Enfance Logo" class="footer-logo-img">
+          <span data-school>Enfance Pre School</span>
+        </div>
         <p style="margin-bottom: 20px;">Child-centered learning focusing on critical early-year milestones, social confidence, child safety, and creative exploration.</p>
       </div>
       
@@ -154,15 +158,16 @@
       <div>
         <h3>Get In Touch</h3>
         <ul class="footer-contact">
-          <li><span>📍</span> <span data-address></span></li>
-          <li><span>✉️</span> <span data-email></span></li>
-          <li><span>📞</span> <span data-phone></span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i></span> <span data-address></span></li>
+          <li><span><i class="fa-solid fa-envelope"></i></span> <span data-email></span></li>
+          <li><span><i class="fa-solid fa-phone"></i></span> <span data-phone></span></li>
         </ul>
       </div>
     </div>
     
     <div class="container footer-bottom">
-      © <span id="year"></span> <span data-school></span>. All Rights Reserved. Designed for Joyful Foundation Education.
+      <div style="margin-bottom: 8px;">Made by Yugantar Technologies.</div>
+      © <span id="year"></span> <span data-school></span>. All Rights Reserved.
     </div>
   </footer>
 

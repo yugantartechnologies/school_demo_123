@@ -21,11 +21,17 @@ const defaults = {
 
 // Data Retrieval functions
 function getData() {
-  const d = JSON.parse(localStorage.getItem('enfanceData') || JSON.stringify(defaults));
+  let d;
+  try {
+    const raw = localStorage.getItem('enfanceData');
+    d = raw ? JSON.parse(raw) : defaults;
+  } catch (e) {
+    d = defaults;
+  }
   // Clean up older paths in programs cached in user's localStorage
-  if (d && d.programs) {
+  if (d && Array.isArray(d.programs)) {
     d.programs = d.programs.map(p => {
-      if (p[3] && p[3].includes('classes')) {
+      if (p && p[3] && p[3].includes('classes')) {
         let path = p[3];
         // Convert old .jpg to .png
         if (path.includes('.jpg')) {
@@ -39,6 +45,8 @@ function getData() {
       }
       return p;
     });
+  } else {
+    d.programs = defaults.programs;
   }
   return d;
 }
